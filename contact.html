@@ -1,0 +1,220 @@
+<!-- contact.html -->
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>تماس با ما | ZINAP</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@200;300;400&family=Bodoni+Moda:wght@700&display=swap">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add("js")</script>
+<style>
+  .contact-hero{padding:16vh var(--pad) 6vh;text-align:center}
+  .contact-hero .kicker{font-size:11px;letter-spacing:.24em;color:var(--mute);margin-bottom:22px}
+  .contact-hero h1{font-size:clamp(44px,7vw,100px);font-weight:200;line-height:1.15;letter-spacing:-.02em}
+  .contact-hero .lead{max-width:560px;margin:24px auto 0;color:var(--mute);font-size:15px}
+  .contact-grid{display:grid;grid-template-columns:repeat(3,1fr);border-block:1px solid var(--line)}
+  .contact-grid>a{display:flex;flex-direction:column;align-items:flex-start;gap:12px;padding:42px var(--pad);border-inline-start:1px solid var(--line);transition:background .25s}
+  .contact-grid>a:first-child{border-inline-start:0}
+  .contact-grid>a:hover{background:#f6f6f6}
+  .contact-grid .ic{width:26px;height:26px;opacity:.8}
+  .contact-grid b{display:block;font-weight:400;font-size:11px;letter-spacing:.14em;color:var(--mute)}
+  .contact-grid span{display:block;font-weight:400;font-size:17px;color:var(--ink)}
+  .contact-grid span[dir]{direction:ltr}
+  .contact-form{max-width:680px;margin:0 auto;padding:12vh var(--pad)}
+  .contact-form h2{font-size:clamp(24px,3.2vw,38px);font-weight:200;margin-bottom:10px;line-height:1.4}
+  .contact-form .lead{color:var(--mute);margin-bottom:42px}
+  .cf{display:grid;gap:28px}
+  .cf label{display:block}
+  .cf .lb{display:block;font-size:11px;letter-spacing:.14em;color:var(--mute);margin-bottom:8px}
+  .cf input,.cf textarea{width:100%;border:0;border-bottom:1px solid var(--line);background:none;font:inherit;font-family:var(--fa);font-size:15px;padding:10px 0;color:var(--ink);transition:border-color .25s;border-radius:0}
+  .cf input:focus,.cf textarea:focus{outline:0;border-color:var(--ink)}
+  .cf textarea{min-height:130px;resize:vertical;line-height:1.9}
+  .cf button{margin-top:12px;justify-self:start;padding:16px 42px}
+  .cf .ok{color:#0a7a3d;font-weight:400;margin-top:16px}
+  @media (max-width:900px){
+    .contact-grid{grid-template-columns:1fr}
+    .contact-grid>a{border-inline-start:0;border-top:1px solid var(--line);padding:32px var(--pad)}
+    .contact-grid>a:first-child{border-top:0}
+    .pdp .legal{padding-bottom:0!important}
+  }
+</style>
+</head>
+<body class="pdp static-page">
+<a class="skip" href="#main">رفتن به محتوا</a>
+
+<header class="header solid" id="header">
+  <div class="bar">
+    <div class="bar-start">
+      <button class="icon-btn" id="openMenu" aria-expanded="false" aria-controls="menu">
+        <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <span>منو</span>
+      </button>
+      <nav class="quick" aria-label="دسترسی سریع"><a href="index.html">جدید</a><a href="#">سرهمی</a><a href="#">پیراهن</a><a href="#">کژوال</a><a href="#">حراج</a></nav>
+    </div>
+    <div class="bar-end">
+      <button class="bar-act" id="openSearch" aria-expanded="false" aria-controls="search">
+        <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <span>جستجو</span>
+      </button>
+      <a class="bar-act hide-s" href="#">
+        <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 20c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>
+        <span>ورود</span>
+      </a>
+      <a class="bar-act hide-s" href="contact.html">
+        <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 14v-2a8 8 0 0116 0v2"/><rect x="3" y="13" width="4" height="7" rx="1.5"/><rect x="17" y="13" width="4" height="7" rx="1.5"/><path d="M19 20a4 4 0 01-3.5 2.5"/></svg>
+        <span>پشتیبانی</span>
+      </a>
+      <button class="bar-act" id="openCart" aria-expanded="false" aria-controls="cart">
+        <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 8h12l1 12H5z"/><path d="M9 8V6a3 3 0 016 0v2"/></svg>
+        <span>سبد</span><span class="count">(۰)</span>
+      </button>
+    </div>
+  </div>
+  <a class="logo" href="index.html" aria-label="ZINAP صفحه‌ی اصلی">ZINAP</a>
+</header>
+
+<div class="scrim" id="scrim"></div>
+
+<nav class="panel menu" id="menu" aria-label="منوی اصلی">
+  <div class="menu-list">
+    <button class="x" type="button">بستن</button>
+    <ul>
+      <li data-p="0" data-t="تازه‌ها"><a class="top" href="#" aria-expanded="false">جدید<span>+</span></a><div class="sub"><ul><li><a href="#">کالکشن زمستانی ۱۴۰۴</a></li><li><a href="#">پرفروش‌ها</a></li><li><a href="#">سرهمی‌های جدید</a></li><li><a href="#">پیشنهاد ذیناپ</a></li></ul></div></li>
+      <li data-p="1" data-t="سرهمی اسکی"><a class="top" href="#" aria-expanded="false">سرهمی<span>+</span></a><div class="sub"><ul><li><a href="#">سرهمی مردانه</a></li><li><a href="#">سرهمی زنانه</a></li><li><a href="#">سرهمی کودک</a></li><li><a href="#">سرهمی حرفه‌ای</a></li></ul></div></li>
+      <li data-p="2" data-t="پیراهن اسکی"><a class="top" href="#" aria-expanded="false">پیراهن<span>+</span></a><div class="sub"><ul><li><a href="#">پیراهن ترمال</a></li><li><a href="#">پیراهن بیس‌لایر</a></li><li><a href="#">پیراهن یقه‌دار</a></li><li><a href="#">پیراهن کوتاه</a></li></ul></div></li>
+      <li data-p="3" data-t="کژوال زمستانی"><a class="top" href="#" aria-expanded="false">کژوال<span>+</span></a><div class="sub"><ul><li><a href="#">هودی و سویشرت</a></li><li><a href="#">شلوار کژوال</a></li><li><a href="#">تیشرت</a></li><li><a href="#">بافت</a></li></ul></div></li>
+      <li data-p="4" data-t="اکسسوری اسکی"><a class="top" href="#" aria-expanded="false">اکسسوری<span>+</span></a><div class="sub"><ul><li><a href="#">دستکش اسکی</a></li><li><a href="#">عینک اسکی</a></li><li><a href="#">کلاه و بالاکلاوا</a></li><li><a href="#">جوراب اسکی</a></li></ul></div></li>
+      <li data-p="5" data-t="تا ۵۰٪ تخفیف"><a class="top" href="#" aria-expanded="false">حراج</a></li>
+    </ul>
+    <div class="menu-foot"><a href="#">ورود / ثبت‌نام</a><a href="contact.html">پشتیبانی</a><a href="about.html">درباره‌ی ما</a></div>
+  </div>
+  <div class="menu-prev" aria-hidden="true"><img data-p="0" src="img/63.webp" alt=""><img data-p="1" src="img/70.webp" alt=""><img data-p="2" src="img/84.webp" alt=""><img data-p="3" src="img/69.webp" alt=""><img data-p="4" src="img/91.webp" alt=""><img data-p="5" src="img/86.webp" alt=""><span class="tag"></span></div>
+</nav>
+
+<div class="panel search" id="search" role="dialog" aria-label="جستجو">
+  <div class="s-top">
+    <span class="s-brand" aria-hidden="true">ZINAP</span>
+    <button class="x" type="button">
+      <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      <span>بستن</span>
+    </button>
+  </div>
+  <div class="s-body">
+    <p class="s-kicker">جستجو در کالکشن زمستانی</p>
+    <form class="s-form" action="#" role="search">
+      <label class="sr-only" for="q">جستجو</label>
+      <span class="s-ic" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></span>
+      <input id="q" type="search" placeholder="سرهمی، پیراهن، کژوال…" autocomplete="off">
+      <button type="submit" aria-label="جستجو">
+        <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+      </button>
+    </form>
+    <div class="s-grid">
+      <section class="s-col">
+        <h3>پرجستجوترین‌ها</h3>
+        <ul class="s-list">
+          <li><a href="#"><span class="n">۰۱</span><span>سرهمی اسکی</span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 6l-6 6 6 6"/></svg></a></li>
+          <li><a href="#"><span class="n">۰۲</span><span>ژاکت پرشده</span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 6l-6 6 6 6"/></svg></a></li>
+          <li><a href="#"><span class="n">۰۳</span><span>پیراهن ترمال</span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 6l-6 6 6 6"/></svg></a></li>
+          <li><a href="#"><span class="n">۰۴</span><span>دستکش اسکی</span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 6l-6 6 6 6"/></svg></a></li>
+          <li><a href="#"><span class="n">۰۵</span><span>عینک اسکی</span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 6l-6 6 6 6"/></svg></a></li>
+        </ul>
+      </section>
+      <section class="s-col">
+        <h3>دسته‌بندی‌ها</h3>
+        <div class="chips"><a href="#">سرهمی اسکی</a><a href="#">پیراهن</a><a href="#">کژوال</a><a href="#">لباس اسکی</a><a href="#">اکسسوری</a><a href="#">کودک</a><a href="#">حراج</a></div>
+      </section>
+    </div>
+  </div>
+</div>
+
+<aside class="panel cart" id="cart" aria-label="سبد خرید">
+  <button class="x" type="button">بستن</button>
+  <h2>سبد خرید</h2>
+  <p class="empty" id="empty">سبد خرید شما خالی است.</p>
+  <ul class="lines" id="lines"></ul>
+  <div class="tot" id="tot" hidden><span>جمع کل</span><span id="sum"></span></div>
+  <a class="btn" id="go" href="index.html">ادامه‌ی خرید</a>
+</aside>
+
+<main id="main" class="pdp-main">
+  <section class="contact-hero">
+    <p class="kicker">پشتیبانی</p>
+    <h1>تماس با ما</h1>
+    <p class="lead">سوالی دارید؟ تیم پشتیبانی ذیناپ هر روز از ۹ تا ۲۱ در کنار شماست.</p>
+  </section>
+
+  <section class="contact-grid" aria-label="راه‌های ارتباطی">
+    <a href="tel:+989300908059">
+      <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 006 6L16 14l5 2v4a1 1 0 01-1 1A17 17 0 013 6a1 1 0 011-1z"/></svg>
+      <b>تماس تلفنی</b>
+      <span dir="ltr">۰۹۳۰۰۹۰۸۰۵۹</span>
+    </a>
+    <a href="https://instagram.com/zinap_design" target="_blank" rel="noopener">
+      <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="1" fill="currentColor" stroke="none"/></svg>
+      <b>اینستاگرام</b>
+      <span dir="ltr">@zinap_design</span>
+    </a>
+    <a href="#">
+      <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+      <b>ساعات پاسخگویی</b>
+      <span>هر روز، ۹ تا ۲۱</span>
+    </a>
+  </section>
+
+  <section class="contact-form">
+    <h2>پیام خود را بفرستید</h2>
+    <p class="lead">فرم زیر را پر کنید؛ در اولین فرصت پاسخ می‌دهیم.</p>
+    <form class="cf" action="#">
+      <label><span class="lb">نام</span><input type="text" required></label>
+      <label><span class="lb">شماره تماس یا ایمیل</span><input type="text" required></label>
+      <label><span class="lb">پیام</span><textarea required></textarea></label>
+      <button class="btn" type="submit">ارسال پیام</button>
+      <p class="ok" role="status" hidden>ممنون، پیام شما ارسال شد.</p>
+    </form>
+  </section>
+</main>
+
+<section class="serv">
+  <div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 6h12v10H2zM14 9h4l3 3v4h-7"/><circle cx="6.5" cy="17.5" r="1.8"/><circle cx="17.5" cy="17.5" r="1.8"/></svg><p><b>ارسال رایگان</b><span>برای سفارش‌های بالای [مبلغ]</span></p></div>
+  <div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h12a4 4 0 010 8H8"/><path d="M7 5L4 8l3 3"/></svg><p><b>مرجوعی آسان</b><span>تا [۷] روز پس از دریافت</span></p></div>
+  <div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.2 7.8-8 9-4.8-1.2-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg><p><b>پرداخت امن</b><span>درگاه‌های معتبر بانکی</span></p></div>
+  <div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg><p><b>پشتیبانی</b><span>هر روز، ۹ تا ۲۱</span></p></div>
+</section>
+
+<footer class="footer">
+  <div class="fgrid">
+    <div><b>راهنما</b><a href="#">خدمات مشتریان</a><a href="#">ارسال</a><a href="#">مرجوعی</a><a href="#">راهنمای سایز</a></div>
+    <div><b>برند</b><a href="about.html">درباره‌ی ما</a><a href="#">مجله</a><a href="#">فرصت‌های شغلی</a></div>
+    <div><b>تماس</b>
+      <a href="contact.html"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><span>info@zinap.ir</span></a>
+      <a href="contact.html"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 006 6L16 14l5 2v4a1 1 0 01-1 1A17 17 0 013 6a1 1 0 011-1z"/></svg><span style="direction:ltr">۰۹۳۰۰۹۰۸۰۵۹</span></a>
+      <a href="contact.html"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6 7-11a7 7 0 10-14 0c0 5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><span>تهران، ایران</span></a>
+    </div>
+    <div><b>دنبال کنید</b>
+      <a href="https://instagram.com/zinap_design" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="1" fill="currentColor" stroke="none"/></svg><span>اینستاگرام</span></a>
+      <a href="#"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 4L3 10.5l6 2.5 2 6 3.5-3.5L21 4z"/><path d="M9 13l4 3"/></svg><span>تلگرام</span></a>
+    </div>
+    <div class="nl"><b>عضویت در خبرنامه</b><p>تازه‌ها و دسترسی زودتر، اول در ایمیل شما.</p><form action="#"><label class="sr-only" for="em">ایمیل</label><input id="em" type="email" placeholder="ایمیل خود را وارد کنید" required><button type="submit" aria-label="عضویت">←</button></form><p class="ok" role="status" hidden>ممنون، عضو شدید.</p></div>
+  </div>
+  <div class="legal"><span>© ZINAP</span><span>قوانین و مقررات · حریم خصوصی</span></div>
+  <div class="fmark" aria-hidden="true">ZINAP</div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+  // نمایش پیام موفقیت فرم تماس
+  var cf = document.querySelector('.cf');
+  if (cf) cf.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var ok = cf.querySelector('.ok');
+    var btn = cf.querySelector('button[type="submit"]');
+    if (ok) ok.hidden = false;
+    if (btn) btn.disabled = true;
+  });
+</script>
+</body>
+</html>
